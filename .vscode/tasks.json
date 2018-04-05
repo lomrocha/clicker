@@ -1,0 +1,51 @@
+{
+    "version": "0.1.0",
+    "command": "cmd",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "args": [
+        "/C"
+    ],
+    "tasks": [
+        {
+            "taskName": "1. Run processing sketch",
+            "suppressTaskName": true,
+            "isBuildCommand": true,
+            "args": [
+                "processing-java",
+                "--force",
+                "--sketch=${workspaceRoot}",
+                "--output=${workspaceRoot}\\out",
+                "--run"
+            ]
+        },
+        {
+            "taskName": "2. Open Processing reference",
+            "suppressTaskName": true,
+            "isBuildCommand": true,
+            "args": [
+                "--force",
+                "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+                "file:///C:/util/processing-3/modes/java/reference/index.html"
+            ]
+        },
+        {
+            "taskName": "3. Run p5 script",
+            "suppressTaskName": true,
+            "isBuildCommand": true,
+            "args": [
+                "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+                "file:///C:/Users/Dell/Desktop/clicker/index.html"
+            ]
+        },
+        {
+            "taskName": "4. Open p5 reference",
+            "suppressTaskName": true,
+            "isBuildCommand": true,
+            "args": [
+                "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+                "file:///C:/Users/Dell/Desktop/testeSprite/index.html"
+            ]
+        }
+    ]
+}
